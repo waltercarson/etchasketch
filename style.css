@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 512px; /* or whatever size you want */
+    width: 960px; /* or whatever size you want */
   }
   
   .cell {
@@ -10,7 +10,15 @@
     align-items: center;
     box-sizing: border-box;
     border: 1px solid #ccc;
-    width: 15px;
-    height: 15px;
+    width: 25px;
+    height: 25px;
+  }
+
+  .buttonContainer {
+    display: flex;
+    flex: auto;
+    align-items: center;
+    justify-content: center;
+
   }
   

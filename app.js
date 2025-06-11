@@ -1,6 +1,6 @@
 const container = document.querySelector('.grid-container');
 
-        for (let i = 0; i < 1020; i++) {
+        for (let i = 0; i < 1024; i++) {
         const cell = document.createElement('div');
         cell.classList.add('cell');
 
@@ -14,4 +14,11 @@ const container = document.querySelector('.grid-container');
           });
         container.appendChild(cell);
         }
+
+const nmbButton = document.querySelector('.nmbSq');
+        
+        nmbButton.addEventListener('click', () => {
+          prompt('How many squares?');
+          
+        });
 
