@@ -1,6 +1,11 @@
 const container = document.querySelector('.grid-container');
+const nmbButton = document.querySelector('.nmbSq');
 
-        for (let i = 0; i < 1024; i++) {
+function createGrid(squareCount) {
+
+      container.innerHTML = ''
+
+        for (let i = 0; i < squareCount; i++) {
         const cell = document.createElement('div');
         cell.classList.add('cell');
 
@@ -14,11 +19,15 @@ const container = document.querySelector('.grid-container');
           });
         container.appendChild(cell);
         }
-
-const nmbButton = document.querySelector('.nmbSq');
+}
         
         nmbButton.addEventListener('click', () => {
-          prompt('How many squares?');
-          
-        });
+          const input = prompt('How many squares?');
+  const squareCount = parseInt(input);
 
+  if (!isNaN(squareCount) && squareCount > 0) {
+    createGrid(squareCount);
+  } else {
+    alert('Please enter a valid number.');
+  }
+});
